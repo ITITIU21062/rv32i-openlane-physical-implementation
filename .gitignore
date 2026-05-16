@@ -1,0 +1,44 @@
+# OpenLane generated runs are too large to upload
+runs/
+
+# OpenLane temporary/generated files
+*.log
+*.ext
+*.spice
+*.sdf
+*.sdc
+
+# OpenLane heavy/generated outputs
+runs/*/tmp/
+runs/*/logs/
+runs/*/results/
+runs/*/objects/
+runs/*/cache/
+
+# Keep selected reports if manually copied
+*.log
+*.vcd
+*.out
+*.dump
+
+# Simulation outputs
+sim/**/*.vcd
+sim/**/*.out
+
+# Python/cache
+__pycache__/
+*.pyc
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Large layout generated files, optional
+*.gds
+*.mag
+*.lef
+*.def
+*.odb
+*.spef
