@@ -206,7 +206,17 @@ module rv32i_top #(
     assign W_mem_wdata    = mem_store_data;
     assign W_mem_rdata    = mem_load_data;
     assign W_stall        = stall_if_id;
-    assign W_flush        = flush_id_ex | flush_if_id;
+    // assign W_flush        = flush_id_ex | flush_if_id;
+    logic W_flush_next;
+
+    assign W_flush_next = flush_id_ex | flush_if_id;
+
+    always_ff @(posedge i_clk or negedge i_arst_n) begin
+        if (!i_arst_n)
+            W_flush <= 1'b0;
+        else
+            W_flush <= W_flush_next;
+    end
     assign W_immediate    = wb_immediate;
     assign W_ALUSrc       = ex_alu_src;
     

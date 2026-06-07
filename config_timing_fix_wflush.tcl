@@ -29,7 +29,7 @@ set ::env(VERILOG_FILES) [list \
 
 set ::env(CLOCK_PORT) "i_clk"
 set ::env(CLOCK_NET) "i_clk"
-set ::env(CLOCK_PERIOD) "25"
+set ::env(CLOCK_PERIOD) "20"
 
 set ::env(FP_SIZING) absolute
 set ::env(DIE_AREA) "0 0 1200 1200"
@@ -44,7 +44,7 @@ set ::env(PL_BASIC_PLACEMENT) 0
 set ::env(RUN_CVC) 0
 set ::env(FP_IO_UNMATCHED_ERROR) 0
 # Timing fix attempt for W_flush debug output path
-set ::env(CLOCK_PERIOD) "25"
+set ::env(CLOCK_PERIOD) "20"
 
 set ::env(SYNTH_STRATEGY) "AREA 1"
 set ::env(SYNTH_BUFFERING) 1
@@ -58,4 +58,4 @@ set ::env(PL_RESIZER_DESIGN_OPTIMIZATIONS) 1
 set ::env(GLB_RESIZER_TIMING_OPTIMIZATIONS) 0
 set ::env(GLB_RESIZER_DESIGN_OPTIMIZATIONS) 0
 
-set ::env(PL_RESIZER_HOLD_SLACK_MARGIN) 0.2
+set ::env(PL_RESIZER_HOLD_SLACK_MARGIN) 0.1
