@@ -42,3 +42,13 @@ Thumbs.db
 *.def
 *.odb
 *.spef
+
+# Local backup files
+config_before_*.tcl
+src/*_before_*.sv
+
+# Simulation outputs
+*.out
+*.vcd
+sim/**/*.out
+sim/**/*.vcd
